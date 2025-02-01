@@ -16,7 +16,7 @@ mp.yticks(range(8),labels=[f'{i}' for i in range(1,9)])
 x=ord(input("letter a-h : "))-96
 #print(x)
 y = float(input("number 1-8 : "))
-circle = mp.Circle((x-1,y-1) , radius=(0.2), color = "pink")
+circle = mp.Circle((x-1,y-1) , radius=(0.2), color = 'blue')
 for ferz in range(8):
     #up/down
     if ferz != y-1:
