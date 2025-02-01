@@ -8,3 +8,17 @@
 # Линейный график температуры по дням.
 # Гистограмму распределения температуры.
 # Подсветку "холодных" и "жарких" дней на линейном графике.
+import numpy as np
+import matplotlib.pyplot as plt
+from unicodedata import category
+
+temperature=np.random.randint(-40,35,365)
+count_el=len(temperature)
+medium_tempreture=sum(temperature)/count_el
+print(round(medium_tempreture, 1)) #округлили до дсятых
+hot_days=0
+for i in temperature:
+    if i>25:
+        hot_days+=1
+print(hot_days)
+
