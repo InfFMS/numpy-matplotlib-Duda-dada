@@ -6,12 +6,11 @@
 # Максимальное количество подряд выпавших одинаковых значений.
 # Визуализируйте результаты в виде гистограммы.
 import numpy as np
-<<<<<<< HEAD
+
 import matplotlib.pyplot as plt
 from unicodedata import category
 
-=======
->>>>>>> 9c50aa8f4c19634f439f617a7d1739b187c6e5e9
+
 throws=np.random.randint(1,7,1000)
 #print(throws)
 one=0
@@ -41,7 +40,7 @@ probability4 = four/10
 probability5 = five/10
 probability6 = six/10
 #print('вероятность единицы:', probability1,'%','вероятность двойки:', probability2, '%','вероятность тройки:', probability3,'%', 'вероятность четверки:', probability4,'%','вероятность пятерки:' , probability5,'%','вероятность шестерки:', probability6,'%')
-<<<<<<< HEAD
+
 ma=0
 the_same_elements=0
 n=0
@@ -53,18 +52,19 @@ for i in range(len(throws)-1):
             ma=the_same_elements
         the_same_elements=0
 
-
+plt.subplot(1,2,1)
 categories = ["one","two","three","four","five","six"]
 values = [one, two, three, four, five,six]
 plt.bar(categories, values, color='pink')
 plt.title("Количество каждого полученного результата")
-ax=plt.subplots()
+plt.subplot(1,2,2)
 #plt.legend(["one="],'one',["two="],'two',["three="],'three',["four"],'four',["five"],'five',["six"],'six'))
 categories = ["one","two","three","four","five","six"]
 values = [probability1,probability2,probability3,probability4,probability5,probability6]
 plt.bar(categories, values, color='pink')
 plt.title("Вероятность выпадения каждого значения(%)")
 #ax=plt.subplots()
+plt.tight_layout()
 plt.show()
 print(throws)
 print("Сколько раз встречается единица:",
@@ -73,18 +73,17 @@ four,"Сколько раз встречается пятерка:", five, "Ск
 print('вероятность единицы:', probability1,'%','вероятность двойки:', probability2, '%','вероятность тройки:', probability3,'%',
 'вероятность четверки:', probability4,'%','вероятность пятерки:' , probability5,'%','вероятность шестерки:', probability6,'%')
 print('Максимальное количество идущих подряд одинаковых элементов:', ma)
-=======
-
-n=0
-for i in range(len(throws)-1):
-    if throws[i]==throws[i+1]:
-        n+=1
-    else:
-        the_same_elements=n
-        n=0
-print(the_same_elements)
 
 
+# n=0
+# for i in range(len(throws)-1):
+#     if throws[i]==throws[i+1]:
+#         n+=1
+#     else:
+#         the_same_elements=n
+#         n=0
+# print(the_same_elements)
 
->>>>>>> 9c50aa8f4c19634f439f617a7d1739b187c6e5e9
+
+
 

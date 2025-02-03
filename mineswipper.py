@@ -24,16 +24,20 @@ x1 = mina1x
 y1 = mina1y
 firstmina = mp.Circle((x1-1,y1-1) , radius=(0.2), color = 'red')
 ax.add_patch(firstmina)
+nelzya=[]
 for i in range(14):
-    mina2x = np.random.randint(1, 9, )
+    mina2x = np.random.randint(1, 11)
     mina2y = np.random.randint(1, 11)
     x2 = mina2x
     y2 = mina2y
     if x2 != x1:
         secondmina = mp.Circle((x2 - 1, y2 - 1), radius=(0.2), color="red")
+        ax.add_patch(secondmina)
     else:
-        secondmina = mp.Circle((x2 , y2 - 1), radius=(0.2), color="red")
-    ax.add_patch(secondmina)
+        while x2!=x1:
+            x2 = np.random.randint(1, 11)
+        secondmina = mp.Circle((x2 - 1, y2 - 1), radius=(0.2), color="red")
+        ax.add_patch(secondmina)
 
 mp.show()
 
